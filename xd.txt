@@ -1,0 +1,28 @@
+int contador = 0;
+            bool hayPunto = false;
+            int ubicacionPunto;
+            int x = txtMontoInicial.Text.Length;
+            for (int y = 0; y < x; y++)
+            {
+                char cad = txtMontoInicial.Text[y];
+                if (cad == '.')
+                {
+                    hayPunto = true;
+                    ubicacionPunto = y;
+                }
+            }
+            if (hayPunto)
+            {
+                for  (int j = 0; j<x; j++)
+                {
+                    if (j > ubicacionPunto)
+                    {
+                        contador++;
+                    }
+                }
+            }
+            if (contador < 2)
+            {
+                txtMontoInicial.Text += "1";
+
+            }
